@@ -7,21 +7,78 @@ body {
 }
 .first {
   background: white;
-  -webkit-clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 45%);
-          clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 45%);
-          height: 500px;
-          padding-bottom: 35%;
+  -webkit-clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
+          clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
+          height: 800px;
+          border-radius: 8%;
+        width: 91%;
+         
 }
 body .second {
-  -webkit-clip-path: polygon(0 1%, 100% 59%, 100% 100%, 0 100%);
-  clip-path: polygon(0 1%, 100% 59%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 21%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 21%, 100% 100%, 0 100%);
   background: white;
-  height: 200px;
-  padding-top: 35%;
-}
-.container{
-  height: 100%;
+  height: 350px;
+  position: fixed;
+  width: 80%;
+  border-radius: 8%;
   
 }
 
+
+.container{
+  height: 100%;
+  margin: 5%;
+  
+}
+ p{
+  text-align: center;
+  color: black;
+  margin: 15%;
+  font-size: 200%;
+  margin-bottom: 0px;
+}
+#signup{
+  margin: 5%;
+  margin-top: 0px;
+  background: #4776E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8e54e9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  font-size: 400%;
+ width: 80%;
+ border-radius: 5%;
+}
+a{
+  text-decoration: none;
+}
+label{
+  margin-top: 20%;
+  margin-left: 5%;
+  font-size: 200%;
+  
+}
+input[type='text']{
+  margin: 5%;
+  height: 5%;
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid;
+  font-size: 200%;
+}
+#form{
+  margin: 5%;
+  margin-top: 10%;
+  width: 100%;
+ 
+}
+input[type='password']{
+  font-size: 200%;
+  border: none;
+  border-bottom: 2px solid;
+  margin: 5%;
+  height: 5%;
+  width: 80%;
+ 
+}
 /*# sourceMappingURL=styles.css.map */

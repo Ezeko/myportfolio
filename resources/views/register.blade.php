@@ -4,14 +4,31 @@
 
 @section('content')
 
-<form>
-    <div class="container">
-        <div class="first"> 
-        <input type="text" placeholder="Enter FullName" required />
+
+<div class="container">
+    <form>
+   
+        <div class="first">
+        <div id="form"> 
+        <div>
+            <label for='username'>USERNAME</label>
+        <input type="text" name="username" placeholder="Enter Username" required />
         </div>
-        <div class="second"></div>
-    </div>
-</form>
+        <div>
+            <label for="password">PASSWORD</label>
+        <input type="password" name="password" placeholder="Enter Password" required />
+        </div>
+        </div>
+        </div>
+    </form>
+        <div class="second">
+            <p>Don't Have an account?? </p><br>
+            <div id="signup">
+            <a  href=""> SIGN UP </a>
+            </div>
+        </div>
+</div>
+
 
 
 @endsection
