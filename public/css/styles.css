@@ -17,7 +17,7 @@ span{
   margin-top: 5%;
   -webkit-clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
           clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
-          height: 700px;
+          height: 33vh;
           position: absolute;
           border-radius: 8%;
         width:80%;
@@ -29,7 +29,7 @@ body .second {
   background: white;
   height: 350px;
   position: fixed;
-  bottom: 830px;
+  bottom: 45vh;
   width: 80%;
   border-radius: 8%;
   
@@ -85,8 +85,8 @@ input{
   height: 100px;
   width: 100px;
   position: fixed;
-  right: 150px;
-  bottom: 1200px;
+  right: 8vh;
+  bottom: 62vh;
   font-size: 200%;
   color:white;
   -webkit-clip-path: circle(50% at 50% 50%);
