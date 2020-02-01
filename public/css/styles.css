@@ -9,13 +9,15 @@ span{
   text-align: center;
   color: white;
   margin: 40%;
+  margin-bottom: 20%;
   font-size: 200%;
 }
 .first {
   background: white;
+  margin-top: 5%;
   -webkit-clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
           clip-path: polygon(0 1%, 100% 0, 100% 99%, 0 86%);
-          height: 800px;
+          height: 700px;
           position: absolute;
           border-radius: 8%;
         width:80%;
@@ -27,7 +29,7 @@ body .second {
   background: white;
   height: 350px;
   position: fixed;
-  bottom: 770px;
+  bottom: 830px;
   width: 80%;
   border-radius: 8%;
   
@@ -72,6 +74,23 @@ input[type='text']{
   border: none;
   border-bottom: 2px solid;
   font-size: 200%;
+}
+input{
+  font-family: FontAwesome;
+}
+#sub{
+  background: #4776E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8e54e9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  right: 150px;
+  bottom: 1200px;
+  font-size: 200%;
+  color:white;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
 }
 input[name='remember']{
   margin-left: 5%;

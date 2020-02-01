@@ -14,7 +14,7 @@
 
         <div id="user">
         <label for='username'>USERNAME</label>
-        <i class="fa fa-user"><input type="text" name="username"  placeholder="Enter Username" required /></i>
+        <input type="text" class="user" name="username"  placeholder=" Enter Username" required />
         </div>
 
         <div>
@@ -25,6 +25,8 @@
         <div>
             <input type="checkbox" name="remember" > REMEMBER ME
         </div>
+
+        <button type="submit" id="sub"><div ><i class="fa fa-arrow-right"></i></div></button>
 
 
         </div>

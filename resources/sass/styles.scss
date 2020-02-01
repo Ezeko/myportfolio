@@ -12,5 +12,6 @@ body{
     clip-path: polygon(0 1%, 100% 74%, 100% 100%, 0 100%);
     background: $color;
     height: 300px;
+    clip-path: circle(50% at 50% 50%);
 }
 }
