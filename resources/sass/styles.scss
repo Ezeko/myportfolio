@@ -1,0 +1,16 @@
+$background: black;
+$color: white;
+
+body{
+    background-color: $background;
+
+.first{
+    background: $color;
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0 59%);
+}
+.second{
+    clip-path: polygon(0 1%, 100% 74%, 100% 100%, 0 100%);
+    background: $color;
+    height: 300px;
+}
+}

@@ -7,8 +7,10 @@
   <title>@yield('title')</title>
   <meta name="description" content="Adejobi Ezekiel portfolio">
   <meta name="author" content="Adejobi Ezekiel">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/ezeko/image/upload/v1566502038/images/31517324_l4rbyl.jpg" 
+        type="image/x-icon">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="{{URL::asset('css/styles.css') }}" >
 
 </head>
 
