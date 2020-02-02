@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     //
     function landingPage(){
-        return view('register');
+        return view('signin');
     }
 }

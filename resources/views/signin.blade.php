@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'E-Folio :: Register Account')
+@section('title', 'E-Folio :: Sign in')
 
 @section('content')
 
