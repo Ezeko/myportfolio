@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="{{URL::asset('css/styles2.css') }}" >
 <div class="container">
     <span>REGISTER</span>
-    <form>
+    <form method="POST" action='/createuser'>
    
         <div class="first">
         <div id="form"> 
-
+            {{$msg ?? ''}}
         <div id="user">
         <label for='username'>USERNAME</label>
         <input type="text" class="user" name="username"  placeholder=" Enter Username" required />
@@ -19,7 +19,7 @@
 
         <div id="user">
         <label for='username'>EMAIL</label>
-        <input type="text" class="user" name="email"  placeholder=" Enter Email" required />
+        <input type="email" class="user" name="email"  placeholder=" Enter Email" required />
         </div>
 
         <div>

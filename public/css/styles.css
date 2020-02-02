@@ -70,7 +70,7 @@ label[for='username'], label{
   margin-left: 5%;
   font-size: 200%;
 }
-input[type='text']{
+input[type='email']{
   margin: 5%;
   height: 5%;
   width: 80%;

@@ -13,8 +13,8 @@
         <div id="form"> 
 
         <div id="user">
-        <label for='username'>USERNAME</label>
-        <input type="text" class="user" name="username"  placeholder=" Enter Username" required />
+        <label for='username'>E-MAIL</label>
+        <input type="email" class="user" name="email"  placeholder=" Enter Email" required />
         </div>
 
         <div>
