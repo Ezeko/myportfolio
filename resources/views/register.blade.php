@@ -12,6 +12,7 @@
         <div class="first">
         <div id="form"> 
             {{$msg ?? ''}}
+            {{@csrf_field()}}
         <div id="user">
         <label for='username'>USERNAME</label>
         <input type="text" class="user" name="username"  placeholder=" Enter Username" required />
@@ -21,6 +22,7 @@
         <label for='username'>EMAIL</label>
         <input type="email" class="user" name="email"  placeholder=" Enter Email" required />
         </div>
+
 
         <div>
             <label for="password">PASSWORD</label>
