@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('register');
-});
+use App\Http\Controllers\HomeController;
+
+Route::get('/', 'HomeController@landingPage');
