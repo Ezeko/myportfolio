@@ -15,12 +15,12 @@ class RegisterController extends Controller
     function create_user(Request $request){
         $user = new User();
         $user->email = $request->email;
+        $user->name = $request->name;
         $user->username = $request->username;
         $user->password = $request->password;
 
         $save = $user->save();
-        return redirect('/');
-        exit;
+
         if(!$save){
 
             $msg = "Something Went Wrong";

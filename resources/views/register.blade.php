@@ -14,8 +14,13 @@
             {{$msg ?? ''}}
             {{@csrf_field()}}
         <div id="user">
+        <label for='username'>YOUR NAME</label>
+        <input type="text" class="user" name="name"  placeholder=" Enter Your name" required />
+        </div>
+
+        <div id="user">
         <label for='username'>USERNAME</label>
-        <input type="text" class="user" name="username"  placeholder=" Enter Username" required />
+        <input type="text" class="user" name="username"  placeholder=" Enter Your Username" required />
         </div>
 
         <div id="user">

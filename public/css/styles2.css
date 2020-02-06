@@ -17,7 +17,7 @@ body {
     margin-top: 5%;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 69%);
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 69%);
-            height: 42vh;
+            height: 53vh;
             position: absolute;
             border-radius: 8%;
           width:80%;
@@ -29,7 +29,7 @@ body {
     background: white;
     height: 350px;
     position: fixed;
-    bottom: 44vh;
+    bottom: 32vh;
     width: 80%;
     border-radius: 8%;
     
