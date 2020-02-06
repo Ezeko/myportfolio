@@ -18,3 +18,5 @@ Route::get('/', 'HomeController@landingPage');
 Route::get('/register', 'RegisterController@registerPage');
 
 Route::post('/createuser', 'RegisterController@create_user');
+
+Route::post('/loguser', 'LoginController@log_user');

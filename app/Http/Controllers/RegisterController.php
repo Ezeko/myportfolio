@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     //
-    function registerPage(){
+   public function registerPage(){
         return view('register');
     }
 
-    function create_user(Request $request){
+    public function create_user(Request $request){
         $user = new User();
         $user->email = $request->email;
         $user->name = $request->name;

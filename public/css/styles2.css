@@ -15,8 +15,8 @@ body {
   .first {
     background: white;
     margin-top: 5%;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 69%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 69%);
+    -webkit-clip-path: polygon(50% 0%, 100% 1%, 100% 100%, 0 75%, 0 0);
+            clip-path: polygon(50% 0%, 100% 1%, 100% 100%, 0 75%, 0 0); /*polygon(0 0, 100% 0%, 100% 100%, 0 69%);*/
             height: 53vh;
             position: absolute;
             border-radius: 8%;
@@ -91,7 +91,7 @@ body {
     width: 100px;
     position: fixed;
     right: 8vh;
-    bottom: 55vh;
+    bottom: 43vh;
     font-size: 200%;
     color:white;
     -webkit-clip-path: circle(50% at 50% 50%);

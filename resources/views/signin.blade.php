@@ -7,7 +7,8 @@
 
 <div class="container">
     <span>LOGIN</span>
-    <form>
+    <form action="/loguser" method="POST">
+        {{@csrf_field()}}
    
         <div class="first">
         <div id="form"> 
