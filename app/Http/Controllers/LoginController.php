@@ -21,10 +21,14 @@ class LoginController extends Controller
    
                return view('dashboard', ['session_id', $id]);
             }else {
-                echo "<script>alert('Incorrect Password'); window.location='/'</script>";
+                $msg = "Password Is not correct";
+
+                return view('signin', ['errMsg'=> $msg]);
             }
         }else{
-            echo "<script>alert('$email is not registered'); window.location='/'</script>";
+             $msg = "$email Is not correct";
+
+                return view('signin', ['errMsg'=> $msg]);
         }
 
 

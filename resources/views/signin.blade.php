@@ -8,9 +8,11 @@
 <div class="container">
     <span>LOGIN</span>
     <form action="/loguser" method="POST">
+        
         {{@csrf_field()}}
    
         <div class="first">
+        <h2 style="background: #4776E6;">{{$msg ?? ''}}</h2>
         <div id="form"> 
 
         <div id="user">

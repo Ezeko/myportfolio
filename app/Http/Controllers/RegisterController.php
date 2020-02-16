@@ -13,6 +13,33 @@ class RegisterController extends Controller
     }
 
     public function create_user(Request $request){
+
+        $username = $request->username;
+        $email = $request->email;
+
+        $check = User::where('email', $email)
+                    ->get();
+        //echo $check[0]->username; exit;
+        if (count($check)>0){
+            
+            $msg = "Email Already Registered";
+
+            return view('register', ['errMsg'=> $msg]);
+
+            exit;
+
+        }
+        $check = User::where('username', $username)
+        ->get();
+                if (count($check)>0){
+
+                $msg = "Username Already Registered";
+
+                return view('register', ['errMsg'=> $msg]);
+
+                exit;
+
+                }
         $user = new User();
         $user->email = $request->email;
         $user->name = $request->name;
