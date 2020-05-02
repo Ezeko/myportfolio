@@ -11,8 +11,6 @@
 |
 */
 
-use App\Http\Controllers\HomeController;
-
 Route::get('/', 'HomeController@landingPage');
 
 Route::get('/register', 'RegisterController@registerPage');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Authenticate;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,13 @@ class LoginController extends Controller
 {
     //
     public function log_user(Request $request){
+
+            $this->validate($request, [
+                'password' => 'required',
+                'email' => 'required | email',
+            ]);
+        
+        
         $password = $request->password;
         $email = $request->email;
 
