@@ -18,3 +18,6 @@ Route::get('/register', 'RegisterController@registerPage');
 Route::post('/createuser', 'RegisterController@create_user');
 
 Route::post('/loguser', 'LoginController@log_user');
+
+//dashboard 
+Route::get('/dashboard/{user}', 'LoginController@dashboard');

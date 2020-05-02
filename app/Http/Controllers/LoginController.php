@@ -22,12 +22,15 @@ class LoginController extends Controller
 
         $check = User::where('email', $email)
                     ->get();
+        //echo $check; exit;
         //echo $check[0]->username; exit;
         if (count($check)>0){
             if (($check[0]->password) == $password){
-               $id = session(['id', $check[0]->id]);
-   
-               return view('dashboard', ['session_id', $id]);
+               $id =  $check[0]->id;
+               $user = $check[0]->name;
+               $username = $check[0]->username;
+               return redirect('/dashboard/' .$username);
+              // return view('dashboard')->with( ['user' => $user]);
             }else {
                 $msg = "Password Is not correct";
 
@@ -40,5 +43,12 @@ class LoginController extends Controller
         }
 
 
+    }
+
+    public function dashboard ($username)
+    {
+        $user = User::where('username', $username)
+        ->get()[0]->name;
+        return view('dashboard')->with(['user' => $user]);
     }
 }
