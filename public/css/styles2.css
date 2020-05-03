@@ -79,7 +79,9 @@ body {
     border-bottom: 2px solid gray;
     font-size: 200%;
   }
-  
+  input:focus{
+    outline: none;
+  }
   input{
     font-family: FontAwesome;
   }

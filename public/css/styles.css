@@ -81,6 +81,9 @@ input[type='email']{
 input{
   font-family: FontAwesome;
 }
+input:focus{
+  outline: none;
+}
 #sub{
   background: #4776E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
