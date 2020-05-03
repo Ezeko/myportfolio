@@ -57,7 +57,13 @@ class LoginController extends Controller
         if (count($findUser) > 0 ){
             $user = $findUser[0]->name;
             $session_id = Session()->get('id');
-            return view('dashboard')->with(['user' => $user, 'session_id' => $session_id]);
+            return view('dashboard')->with(
+                [
+                'user' => $user, 
+                'session_id' => $session_id,
+                'username' => $username
+                ]
+            );
         }
         else{
             echo "<script>alert( '$username is not a valid user'); window.location='/';</script>";

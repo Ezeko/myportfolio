@@ -3,15 +3,26 @@
 @section('title', 'E-Folio :: Dashboard')
 
 @section('content')
+<link rel="stylesheet" href="css/dashboard.css">
 
 @if ($session_id)
 <div id="nav">
     <nav>
         <ul>
-            <li>image</li>
-            <li><a href="/profile"> Profile </a>
+            <li>
+                <a href="{{'/'. $username}}">
+                @if (isset($image))
+                <img src="" alt="user image" height="50" width="50" >
+                @else
+                <i class="fa fa-user" ></i>
+                @endif
+                </a>
+            </li>
+            <div id="others">
+            <li><a href="/profile"> Profile </a></li>
             <li><a href="/add"> Add Portfolio</li>
             <li><a href="{{route('logout')}}">logout</a></li>
+            </div>
         </ul>
     </nav>
 </div>
