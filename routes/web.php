@@ -18,7 +18,7 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::get('/register', 'RegisterController@registerPage');
 
-Route::post('/register/createuser', 'RegisterController@create_user');
+Route::post('/createuser', 'RegisterController@create_user');
 
 Route::post('/loguser', 'LoginController@log_user');
 
