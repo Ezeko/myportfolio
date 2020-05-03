@@ -20,4 +20,8 @@ Route::post('/createuser', 'RegisterController@create_user');
 Route::post('/loguser', 'LoginController@log_user');
 
 //dashboard 
-Route::get('/dashboard/{user}', 'LoginController@dashboard');
+Route::get('/{user}', 'LoginController@dashboard');
+
+//logout 
+
+Route::get('/signout', 'LoginController@logout')->name('logout');

@@ -4,6 +4,9 @@
 
 @section('content')
 <div>Hello <b>{{$user}}</b>, welcome to e-folio</div>
-id {{$session_id ?? ''}}
+@if ($session_id)
+id {{$session_id}}
+<a href="{{route('logout')}}">logout</a>
+@endif
 
 @endsection

@@ -6,7 +6,7 @@ use App\Http\Middleware\Authenticate;
 use App\User;
 use Session;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -33,7 +33,7 @@ class LoginController extends Controller
                $username = $check[0]->username;
                Session()->put('id', $id);
             
-               return redirect('/dashboard/' .$username);
+               return redirect('/' .$username);
               // return view('dashboard')->with( ['user' => $user]);
             }else {
                 $msg = "Password Is not correct";
@@ -51,9 +51,21 @@ class LoginController extends Controller
 
     public function dashboard ($username)
     {
-        $user = User::where('username', $username)
-        ->get()[0]->name;
+        $user = '';
+        $findUser = User::where('username', $username)
+        ->get();
+        if (count($findUser) > 0 ){
+            $user = $findUser[0]->name;
+        }
         $session_id = Session()->get('id');
         return view('dashboard')->with(['user' => $user, 'session_id' => $session_id]);
+    }
+
+    //logout 
+    public function logout ()
+    {
+        Session()->flush();
+        return redirect('/');
+
     }
 }
