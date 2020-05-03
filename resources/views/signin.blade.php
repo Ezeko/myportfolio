@@ -12,12 +12,12 @@
         {{@csrf_field()}}
    
         <div class="first">
-        <h2 style="background: #4776E6;">{{$msg ?? ''}}</h2>
+        <h2 style="background: red; text-align: center; border-radius: 1em">{{$errMsg ?? ''}}</h2>
         <div id="form"> 
 
         <div id="user">
         <label for='username'>E-MAIL</label>
-        <input type="email" class="user" name="email"  placeholder=" Enter Email" required />
+        <input type="email" class="user" name="email" value="{{$email ?? ''}}"  placeholder=" Enter Email" required />
         </div>
 
         <div>

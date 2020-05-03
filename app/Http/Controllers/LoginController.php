@@ -38,7 +38,7 @@ class LoginController extends Controller
             }else {
                 $msg = "Password Is not correct";
 
-                return view('signin', ['errMsg'=> $msg]);
+                return view('signin', ['errMsg'=> $msg, 'email' => $email]);
             }
         }else{
              $msg = "$email Is not correct";
@@ -56,9 +56,14 @@ class LoginController extends Controller
         ->get();
         if (count($findUser) > 0 ){
             $user = $findUser[0]->name;
+            $session_id = Session()->get('id');
+            return view('dashboard')->with(['user' => $user, 'session_id' => $session_id]);
         }
-        $session_id = Session()->get('id');
-        return view('dashboard')->with(['user' => $user, 'session_id' => $session_id]);
+        else{
+            echo "<script>alert( '$username is not a valid user'); window.location='/';</script>";
+    
+        }
+
     }
 
     //logout 
