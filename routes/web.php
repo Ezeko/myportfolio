@@ -13,7 +13,10 @@
 
 Route::get('/', 'HomeController@landingPage');
 
-Route::get('/user/register', 'RegisterController@registerPage');
+//logout
+Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Route::get('/register', 'RegisterController@registerPage');
 
 Route::post('/register/createuser', 'RegisterController@create_user');
 
@@ -22,6 +25,4 @@ Route::post('/loguser', 'LoginController@log_user');
 //dashboard 
 Route::get('/{user}', 'LoginController@dashboard');
 
-//logout 
 
-Route::get('/dashboard/logout', 'LoginController@logout')->name('logout');

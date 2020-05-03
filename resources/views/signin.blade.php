@@ -38,7 +38,7 @@
         <div class="second">
             <p>Don't Have an account?? </p><br>
             <div id="signup">
-            <a  href="/user/register"> SIGN UP </a>
+            <a  href="/register"> SIGN UP </a>
             </div>
         </div>
 </div>
