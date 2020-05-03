@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{URL::asset('css/styles2.css') }}" >
 <div class="container">
     <span>REGISTER</span>
-    <form method="POST" action='/createuser'>
+    <form method="POST" action='/register/createuser'>
    
         <div class="first">
         <div id="form"> 

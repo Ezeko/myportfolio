@@ -13,9 +13,9 @@
 
 Route::get('/', 'HomeController@landingPage');
 
-Route::get('/register', 'RegisterController@registerPage');
+Route::get('/user/register', 'RegisterController@registerPage');
 
-Route::post('/createuser', 'RegisterController@create_user');
+Route::post('/register/createuser', 'RegisterController@create_user');
 
 Route::post('/loguser', 'LoginController@log_user');
 
@@ -24,4 +24,4 @@ Route::get('/{user}', 'LoginController@dashboard');
 
 //logout 
 
-Route::get('/signout', 'LoginController@logout')->name('logout');
+Route::get('/dashboard/logout', 'LoginController@logout')->name('logout');
