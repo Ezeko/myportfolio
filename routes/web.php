@@ -14,7 +14,7 @@
 
 Route::get('/', 'HomeController@landingPage');
 
-Route::get('/profile/{user}',  function ( $user ) { echo ('this is profile page for '. $user);})->name('profile');
+Route::get('/profile/{user}',  'ProfileController@showProfile')->name('profile');
 
 //logout
 Route::get('/logout', 'LoginController@logout')->name('logout');
