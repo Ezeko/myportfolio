@@ -31,7 +31,7 @@ class LoginController extends Controller
                $id =  $check[0]->id;
                $user = $check[0]->name;
                $username = $check[0]->username;
-               Session()->put('id', $id);
+               Session()->put(['id' => $id, 'username' => $username]);
             
                return redirect('/' .$username);
               // return view('dashboard')->with( ['user' => $user]);
@@ -57,11 +57,13 @@ class LoginController extends Controller
         if (count($findUser) > 0 ){
             $user = $findUser[0]->name;
             $session_id = Session()->get('id');
+            $session_username = Session()->get('username');
             return view('dashboard')->with(
                 [
                 'user' => $user, 
                 'session_id' => $session_id,
-                'username' => $username
+                'username' => $username,
+                'session_username' => $session_username
                 ]
             );
         }

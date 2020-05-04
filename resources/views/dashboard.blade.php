@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li>
-                <a href="{{'/'. $username}}">
+                <a href="{{'/'. $session_username}}">
                 @if (isset($image))
                 <img src="" alt="user image" height="50" width="50" >
                 @else
@@ -29,6 +29,6 @@
 
 @endif
 
-<div>Hello <b>{{$user}}</b>, welcome to e-folio</div>
+<div>Hello <b>{{$user}}</b>, welcome to e-folio. Add projects to your portfolio to get enlisted on your dashboard!</div>
 
 @endsection
