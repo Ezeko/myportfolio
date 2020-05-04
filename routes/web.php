@@ -16,6 +16,8 @@ Route::get('/', 'HomeController@landingPage');
 
 Route::get('/profile/{user}',  'ProfileController@showProfile')->name('profile');
 
+Route::get('/add/{user}',  'PortfolioController@showAddPortfolioPage');
+
 //logout
 Route::get('/logout', 'LoginController@logout')->name('logout');
 

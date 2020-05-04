@@ -18,9 +18,10 @@
                 @endif
                 </a>
             </li>
+            
             <div id="others">
             <li><a href="{{'/profile/'.$session_username}}"> Profile </a></li>
-            <li><a href="/add"> Add Portfolio</li>
+            <li><a href="{{'/add/'. $session_username}}"> Add Portfolio</li>
             <li><a href="{{route('logout')}}">logout</a></li>
             </div>
         </ul>
