@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Portfolio;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -47,7 +48,7 @@ class PortfolioController extends Controller
     
             ]);
             
-            $imageName = time().'.'.request()->image2->getClientOriginalExtension();
+            $image2Name = time().'.'.request()->image2->getClientOriginalExtension();
 
     
 
@@ -59,7 +60,7 @@ class PortfolioController extends Controller
 
                 ->with('success','You have successfully upload image.')
 
-                ->with('image',$imageName);
+                ->with('image',$image2Name);
         }
 
         
@@ -71,11 +72,11 @@ class PortfolioController extends Controller
     
             ]);
             
-            $imageName = time().'.'.request()->image3->getClientOriginalExtension();
+            $image3Name = time().'.'.request()->image3->getClientOriginalExtension();
 
     
 
-            request()->image3->move(public_path('images'), $imageName);
+            request()->image3->move(public_path('images'), $image3Name);
 
     
 
@@ -83,7 +84,7 @@ class PortfolioController extends Controller
 
                 ->with('success','You have successfully upload image.')
 
-                ->with('image',$imageName);
+                ->with('image',$image3Name);
         }
 
         
@@ -95,11 +96,11 @@ class PortfolioController extends Controller
     
             ]);
             
-            $imageName = time().'.'.request()->image4->getClientOriginalExtension();
+            $image4Name = time().'.'.request()->image4->getClientOriginalExtension();
 
     
 
-            request()->image4->move(public_path('images'), $imageName);
+            request()->image4->move(public_path('images'), $image4Name);
 
     
 
@@ -107,8 +108,28 @@ class PortfolioController extends Controller
 
                 ->with('success','You have successfully upload image.')
 
-                ->with('image',$imageName);
+                ->with('image',$image4Name);
         }
+
+        $username = Session()->get('username');
         
+        $portfolio = new Portfolio();
+
+        $portfolio->image1 = $imageName;
+        $portfolio->image2 = $image2Name;
+        $portfolio->image3 = $image3Name;
+        $portfolio->image4 = $image4Name;
+        $portfolio->description = $request->description;
+        $portfolio->user_id = Session()->get('id');
+
+        $createdPortfolio = $portfolio->save();
+
+        if ($createdPortfolio) {
+            return redirect('/'. $username);
+        }
+        else 
+        {
+            echo "<script>alert('Oops!!! Error occur'); window.location='/add/$username';</script>";
+        }
     }
 }
