@@ -20,6 +20,8 @@ class CreatePortfoliosTable extends Migration
             $table->string('image3');
             $table->string('image4');
             $table->string('description', 500);
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

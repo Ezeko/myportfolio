@@ -36,7 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function portfolio ()
+    public function portfolios ()
     {
         return $this->hasMany(Portfolio::class);
     }

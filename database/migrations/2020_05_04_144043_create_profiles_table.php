@@ -22,8 +22,14 @@ class CreateProfilesTable extends Migration
             $table->string('phone');
             $table->integer('ratings')->default(0);
             $table->string('profile_image');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
+
+        //Schema::create('profiles', function (Blueprint $table) {
+        //    $table->foreign('user_id')->references('id')->on('users');
+        //});
     }
 
     /**
