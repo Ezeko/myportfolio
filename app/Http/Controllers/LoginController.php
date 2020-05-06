@@ -69,6 +69,14 @@ class LoginController extends Controller
             );
         }
         else{
+            $session_username = Session()->get('username');
+
+            // go back to dashboard if logged in
+
+            if ($session_username !== '') {
+                echo "<script>alert( '$username is not a valid user'); window.location='/$session_username';</script>";
+            }
+            // else go to sign in page
             echo "<script>alert( '$username is not a valid user'); window.location='/';</script>";
     
         }
