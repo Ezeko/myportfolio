@@ -26,8 +26,9 @@ class LoginController extends Controller
                     ->get();
         //echo $check; exit;
         //echo $check[0]->username; exit;
+        
         if (count($check)>0){
-            if (($check[0]->password) == $password){
+            if (password_verify($password, $check[0]->password)){
                $id =  $check[0]->id;
                $user = $check[0]->name;
                $username = $check[0]->username;

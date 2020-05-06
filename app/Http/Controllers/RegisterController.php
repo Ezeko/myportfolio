@@ -41,11 +41,13 @@ class RegisterController extends Controller
                 exit;
 
                 }
+        $password = password_hash($request->password,  true);
+
         $user = new User();
         $user->email = $request->email;
         $user->name = $request->name;
         $user->username = $request->username;
-        $user->password = $request->password;
+        $user->password = $password;
 
         $save = $user->save();
 
