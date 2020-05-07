@@ -1,4 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+
 body {
-  color: red;
+  background-color: #eeebeb;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 4%;
+  background-color: grey;
+}
+
+body header aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header aside img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul {
+  list-style: none;
+}
+
+body header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+body main .personal_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 4%;
+  border-bottom: 1px solid grey;
+}
+
+body main .personal_info div.image_container {
+  width: 400px;
+  text-align: center;
+  padding: 7%;
+}
+
+body main .personal_info div.image_container img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid grey;
+  border-radius: 7px;
+}
+
+body main .personal_info .personal_info_details p {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+body main .personal_info .personal_info_details p span:first-child {
+  font-weight: 700;
+  width: 130px;
+  display: inline-block;
+}
+
+body main .personal_info .personal_info_details p span:first-child::after {
+  content: ":-";
+  margin-right: 20px;
+}
+
+body main .top_4_projects {
+  padding: 50px 10%;
+}
+
+body main .top_4_projects h3 {
+  padding: 20px 0;
+}
+
+body main .top_4_projects .card-tab {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+body main .top_4_projects .card-tab div {
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+body main .top_4_projects .card-tab div img {
+  width: 100%;
+  max-height: 250px;
+}
+
+body main .top_4_projects .card-tab div:first-child {
+  border-radius: 8px 0 0 0px;
+}
+
+body main .top_4_projects .card-tab div:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+body main .top_4_projects .card-tab div.active {
+  background-color: whitesmoke;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-bottom: none;
+}
+
+body main .top_4_projects .card-tab div:hover {
+  -webkit-box-shadow: 0px 1px 5px grey;
+          box-shadow: 0px 1px 5px grey;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+}
+
+body main .top_4_projects .card-body {
+  border: 1px solid grey;
+  border-top: none;
+  padding-top: 30px;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+body main .top_4_projects .card-body div {
+  display: none;
+  opacity: none;
+  padding: 0 20px 20px 20px;
+  line-height: 25px;
+}
+
+body main .top_4_projects .card-body div.active {
+  display: block;
+  top: 30px;
+  left: 0;
+}
+
+body footer {
+  background-color: grey;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
 }
 /*# sourceMappingURL=dashboard.css.map */
