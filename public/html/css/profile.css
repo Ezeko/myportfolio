@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+img {
+  object-fit: contain;
+  object-position: top;
+}
+
+body {
+  background-color: #eeebeb;
+  position: relative;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4%;
+  background-color: rgba(119, 31, 170, 0.932);
+}
+
+body header a {
+  color: white;
+}
+
+body header aside {
+  display: flex;
+  align-items: center;
+}
+
+body header aside img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+body header nav {
+  display: flex;
+  align-items: center;
+}
+
+body header nav ul {
+  list-style: none;
+}
+
+body header nav ul li {
+  display: inline;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all .3s;
+}
+
+body header nav ul li:hover {
+  border: 1px solid whitesmoke;
+}
+
+body main section.profile {
+  height: 500px;
+  width: 60vw;
+  margin: 30px auto;
+  border: 1px solid #cfcbcb;
+  border-radius: 6px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 4fr 6fr;
+}
+
+body main section.profile_personal_card {
+  border-right: 1px solid #bebbbb;
+  background-color: white;
+}
+
+body main section.profile_personal_card .card-header {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  padding-top: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 3px rgba(119, 31, 170, 0.932);
+  background-color: white;
+}
+
+body main section.profile_personal_card .card-header div span.image_container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: block;
+  margin: 0px auto 0 auto;
+}
+
+body main section.profile_personal_card .card-header div span.image_container img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(119, 31, 170, 0.932);
+  border-radius: 10px;
+}
+
+body main section.profile_personal_card .card-header div h3 {
+  margin: 20px 0 5px 0;
+  font-size: 24px;
+}
+
+body main section.profile_personal_card .card-header div p {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+body main section.profile_personal_card .card-header .social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+body main section.profile_personal_card .card-header .social_media span.icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px 3px;
+  display: block;
+}
+
+body main section.profile_personal_card .card-header .social_media span.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+body main section.profile_personal_card .card-body {
+  margin: 10px;
+}
+
+body main section.profile_personal_card .card-body aside p:first-child {
+  color: rgba(119, 31, 170, 0.932);
+  font-weight: 700;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+body main section.profile_personal_card .card-body aside p:last-child {
+  padding-left: 10px;
+}
+
+body footer {
+  background-color: grey;
+  color: whitesmoke;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/*# sourceMappingURL=profile.css.map */

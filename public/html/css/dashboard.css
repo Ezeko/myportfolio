@@ -1,8 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -15,34 +15,30 @@ a:hover {
 }
 
 img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: contain;
+  object-position: top;
 }
 
 body {
   background-color: #eeebeb;
+  position: relative;
+  padding-bottom: 50px;
 }
 
 body header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 10px 4%;
-  background-color: grey;
+  background-color: rgba(119, 31, 170, 0.932);
+}
+
+body header a {
+  color: white;
 }
 
 body header aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 body header aside img {
@@ -53,12 +49,8 @@ body header aside img {
 }
 
 body header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 body header nav ul {
@@ -67,19 +59,20 @@ body header nav ul {
 
 body header nav ul li {
   display: inline;
-  margin: 0 10px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all .3s;
+}
+
+body header nav ul li:hover {
+  border: 1px solid whitesmoke;
 }
 
 body main .personal_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 10px 4%;
   border-bottom: 1px solid grey;
 }
@@ -113,86 +106,86 @@ body main .personal_info .personal_info_details p span:first-child::after {
   margin-right: 20px;
 }
 
-body main .top_4_projects {
+body main .top_4_projects, body main .top_fav_projects {
   padding: 50px 10%;
+  transition: all .2s;
 }
 
-body main .top_4_projects h3 {
+body main .top_4_projects h3, body main .top_fav_projects h3 {
   padding: 20px 0;
 }
 
-body main .top_4_projects .card-tab {
-  display: -ms-grid;
+body main .top_4_projects .card-tab, body main .top_fav_projects .card-tab {
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
-body main .top_4_projects .card-tab div {
+body main .top_4_projects .card-tab div, body main .top_fav_projects .card-tab div {
   border: 1px solid grey;
   cursor: pointer;
 }
 
-body main .top_4_projects .card-tab div img {
+body main .top_4_projects .card-tab div img, body main .top_fav_projects .card-tab div img {
   width: 100%;
-  max-height: 250px;
+  max-height: 200px;
 }
 
-body main .top_4_projects .card-tab div:first-child {
+body main .top_4_projects .card-tab div:first-child, body main .top_fav_projects .card-tab div:first-child {
   border-radius: 8px 0 0 0px;
 }
 
-body main .top_4_projects .card-tab div:last-child {
+body main .top_4_projects .card-tab div:last-child, body main .top_fav_projects .card-tab div:last-child {
   border-radius: 0 8px 0 0;
 }
 
-body main .top_4_projects .card-tab div.active {
+body main .top_4_projects .card-tab div.active, body main .top_fav_projects .card-tab div.active {
   background-color: whitesmoke;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
-  -webkit-transition: all 1s;
+  transform: scale(1.005);
   transition: all 1s;
+  border: 1px solid rgba(119, 31, 170, 0.932);
   border-bottom: none;
 }
 
-body main .top_4_projects .card-tab div:hover {
-  -webkit-box-shadow: 0px 1px 5px grey;
-          box-shadow: 0px 1px 5px grey;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
+body main .top_4_projects .card-tab div:hover, body main .top_fav_projects .card-tab div:hover {
+  box-shadow: 0px 1px 5px grey;
+  transform: scale(1.005);
 }
 
-body main .top_4_projects .card-body {
+body main .top_4_projects .card-body, body main .top_fav_projects .card-body {
   border: 1px solid grey;
   border-top: none;
-  padding-top: 30px;
   position: relative;
   background-color: whitesmoke;
 }
 
-body main .top_4_projects .card-body div {
+body main .top_4_projects .card-body div, body main .top_fav_projects .card-body div {
   display: none;
   opacity: none;
   padding: 0 20px 20px 20px;
   line-height: 25px;
+  min-height: 200px;
 }
 
-body main .top_4_projects .card-body div.active {
-  display: block;
+body main .top_4_projects .card-body div.active, body main .top_fav_projects .card-body div.active {
+  display: flex;
+  height: 100%;
   top: 30px;
   left: 0;
+  padding: 20px;
+  border: 1px solid rgba(119, 31, 170, 0.932);
+  border-top: none;
 }
 
 body footer {
   background-color: grey;
   color: whitesmoke;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 /*# sourceMappingURL=dashboard.css.map */
